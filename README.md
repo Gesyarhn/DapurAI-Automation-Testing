@@ -55,4 +55,4 @@ Detail lengkap test case (precondition, steps, expected result) ada di https://b
 - [ ] Automation testing kedua menggunakan Selenium (sandbox site)
 
 ## Author
-Gesya Reihan Nurbayan — [[https](https://www.linkedin.com/in/gesyareihan/)]
+Gesya Reihan Nurbayan — [[LinkedIn](https://www.linkedin.com/in/gesyareihan/)]

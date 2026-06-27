@@ -50,4 +50,4 @@ Detail lengkap test case (precondition, steps, expected result) ada di https://b
 
 
 ## Author
-Gesya Reihan Nurbayan — [LinkedIn(https://www.linkedin.com/in/gesyareihan/)]
+Gesya Reihan Nurbayan — [[ LinkedIn ](https://www.linkedin.com/in/gesyareihan/)]

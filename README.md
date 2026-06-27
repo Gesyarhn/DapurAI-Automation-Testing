@@ -49,10 +49,5 @@ Detail lengkap test case (precondition, steps, expected result) ada di https://b
    ```
 
 
-## Roadmap
-- [ ] Scenario Register
-- [ ] Scenario Recipe Generation & Search
-- [ ] Automation testing kedua menggunakan Selenium (sandbox site)
-
 ## Author
-Gesya Reihan Nurbayan — [[LinkedIn](https://www.linkedin.com/in/gesyareihan/)]
+Gesya Reihan Nurbayan — [LinkedIn(https://www.linkedin.com/in/gesyareihan/)]

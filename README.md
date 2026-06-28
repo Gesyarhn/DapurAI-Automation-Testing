@@ -23,6 +23,21 @@ di internship sebelumnya.
 | TC-007 | Login dengan format email salah | Negative |
 | TC-008 | Karakter password disembunyikan (masking) | Positive |
 
+### Register Scenario — 11 Test Case
+| TC ID | Deskripsi | Type |
+|---|---|---|
+| TC-009 | Register dengan data lengkap dan valid | Positive |
+| TC-010 | Register dengan nama lengkap kosong | Negative |
+| TC-011 | Register dengan email kosong | Negative |
+| TC-012 | Register dengan password kosong | Negative |
+| TC-013 | Register dengan nama dan email kosong | Negative |
+| TC-014 | Register dengan nama dan password kosong | Negative |
+| TC-015 | Register dengan email dan password kosong | Negative |
+| TC-016 | Register tanpa mengisi semua field | Negative |
+| TC-017 | Register dengan format email salah | Negative |
+| TC-018 | Register dengan email yang sudah terdaftar | Negative |
+| TC-019 | Register dengan password kurang dari 6 karakter | Negative |
+
 Detail lengkap test case (precondition, steps, expected result) ada di https://bit.ly/TestScenarioDapurAI
 
 ## Cara Menjalankan

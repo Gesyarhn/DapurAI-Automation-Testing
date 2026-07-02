@@ -29,7 +29,7 @@ test.describe('Recipe Generation Scenario', () => {
         await expect(page.getByTestId('ingredient-tag').filter({ hasText: 'Bawang Putih' })).toBeVisible();
     });
 
-    test('TC-024: user dapat menghapus ingredient yang sudah ditambahkan', async ({ page }) => {
+    test('TC-022: user dapat menghapus ingredient yang sudah ditambahkan', async ({ page }) => {
         const input = page.getByPlaceholder('Add ingredient (e.g., tomatoes)');
         await input.fill('Tomat');
         await input.press('Enter');
@@ -50,7 +50,7 @@ test.describe('Recipe Generation Scenario', () => {
         await expect(page.getByText('Please enter an ingredient')).toBeVisible();
     });
 
-    test('TC-024: sistem mencegah penambahan ingredient duplikat', async ({ page }) => {
+    test('TC-024: sistem mencegah penambahan ingredient duplikat ke dalam list', async ({ page }) => {
         const input = page.getByPlaceholder('Add ingredient (e.g., tomatoes)');
 
         await input.fill('Ayam');

@@ -29,16 +29,16 @@ test.describe('Recipe Generation Scenario', () => {
         await expect(page.getByTestId('ingredient-tag').filter({ hasText: 'Bawang Putih' })).toBeVisible();
     });
 
-    test('TC-022: sistem mencegah penambahan ingredient duplikat', async ({ page }) => {
+    test('TC-024: user dapat menghapus ingredient yang sudah ditambahkan', async ({ page }) => {
         const input = page.getByPlaceholder('Add ingredient (e.g., tomatoes)');
-
-        await input.fill('Ayam');
-        await input.press('Enter');
-        await input.fill('Ayam');
+        await input.fill('Tomat');
         await input.press('Enter');
 
-        await expect(page.getByText('Ingredient already added!')).toBeVisible();
-        await expect(page.getByTestId('ingredient-tag').filter({ hasText: 'Ayam' })).toHaveCount(1);
+        const tag = page.getByTestId('ingredient-tag').filter({ hasText: 'Tomat' });
+        await expect(tag).toBeVisible();
+
+        await tag.locator('button').click();
+        await expect(tag).not.toBeVisible();
     });
 
     test('TC-023: ingredient kosong/hanya spasi tidak ditambahkan ke list', async ({ page }) => {
@@ -50,16 +50,16 @@ test.describe('Recipe Generation Scenario', () => {
         await expect(page.getByText('Please enter an ingredient')).toBeVisible();
     });
 
-    test('TC-024: user dapat menghapus ingredient yang sudah ditambahkan', async ({ page }) => {
+    test('TC-024: sistem mencegah penambahan ingredient duplikat', async ({ page }) => {
         const input = page.getByPlaceholder('Add ingredient (e.g., tomatoes)');
-        await input.fill('Tomat');
+
+        await input.fill('Ayam');
+        await input.press('Enter');
+        await input.fill('Ayam');
         await input.press('Enter');
 
-        const tag = page.getByTestId('ingredient-tag').filter({ hasText: 'Tomat' });
-        await expect(tag).toBeVisible();
-
-        await tag.locator('button').click();
-        await expect(tag).not.toBeVisible();
+        await expect(page.getByText('Ingredient already added!')).toBeVisible();
+        await expect(page.getByTestId('ingredient-tag').filter({ hasText: 'Ayam' })).toHaveCount(1);
     });
 
     test('TC-025: validasi muncul saat generate tanpa ingredient & tanpa pantry', async ({ page }) => {

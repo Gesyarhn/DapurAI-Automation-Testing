@@ -45,9 +45,9 @@ testing menggunakan Playwright, sebagai pelengkap pengalaman manual testing (UAT
 |---|---|---|
 | TC-020 | Menambahkan ingredient via tombol Plus | Positive |
 | TC-021 | Menambahkan ingredient dengan menekan Enter | Positive |
-| TC-022 | Mencegah penambahan ingredient duplikat | Negative |
+| TC-022 | Menghapus ingredient yang sudah ditambahkan | Positive |
 | TC-023 | Ingredient kosong/hanya spasi tidak ditambahkan | Negative |
-| TC-024 | Menghapus ingredient yang sudah ditambahkan | Positive |
+| TC-024 | Mencegah penambahan ingredient duplikat | Negative |
 | TC-025 | Validasi saat generate tanpa ingredient & tanpa pantry | Negative |
 | TC-026 | Generate recipe berhasil dengan minimal 1 ingredient | Positive |
 | TC-027 | Generate berhasil via toggle "Use Pantry" | Positive |
@@ -61,7 +61,7 @@ testing menggunakan Playwright, sebagai pelengkap pengalaman manual testing (UAT
 | TC-035 | Recipe yang sudah digenerate dapat disimpan | Positive |
 | TC-036 | Tombol "New Recipe" mengembalikan ke state kosong | Positive |
  
-> Catatan teknis: test case yang memanggil Gemini AI API asli (TC-026, 027, 028, 035, 036)
+> Catatan : test case yang memanggil Gemini AI API asli (TC-026, 027, 028, 035, 036)
 > sengaja dibatasi hanya berjalan di Chromium untuk mengurangi jumlah real API call dan
 > menghindari rate limiting, dengan timeout yang diperpanjang menyesuaikan response time AI
 > yang terukur bervariasi (~10–20 detik).
